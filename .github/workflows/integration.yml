@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout branch
         uses: actions/checkout@v3
+      - name: test presence of new file
+        run: |
+          echo 'this is the new yml'
       - name: Add environment variables to .env
         run: |
           echo "DEBUG=0" >> .env
