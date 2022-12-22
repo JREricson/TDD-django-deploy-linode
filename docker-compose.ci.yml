@@ -28,7 +28,17 @@ services:
       - 80:80
     depends_on:
       - web
+  db:
+    image: "${DB_IMAGE}"
+    volumes:
+      - db_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=hello_django
+      - POSTGRES_PASSWORD=hello_django
+      - POSTGRES_DB=hello_django_dev
+
 
 volumes:
   static_volume:
   media_volume:
+  db_data:
