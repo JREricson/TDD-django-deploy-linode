@@ -31,7 +31,7 @@ services:
   database:
     image: "${DB_IMAGE}"
     volumes:
-      - database_data:/var/lib/postgresql/data/
+      - db_data:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=hello_django
       - POSTGRES_PASSWORD=hello_django
