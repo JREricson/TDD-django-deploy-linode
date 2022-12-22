@@ -43,8 +43,6 @@ jobs:
         run: |
           docker pull ${{ env.WEB_IMAGE }} || true
           docker pull ${{ env.NGINX_IMAGE }} || true
-
-
           docker pull ${{ env.DB_IMAGE }} || true
 
       - name: Build images
